@@ -1,20 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.android.decaturmold.MainActivity">
 
-    <ImageView
-        android:id="@+id/logo"
-        android:src="@drawable/logo"
-        android:layout_width="wrap_content"
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="6dp"
-        android:scaleType="fitCenter"
-        />
+        android:background="@color/colorPrimaryDark">
 
-   
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:id="@+id/description1"
+            style="@style/TitleBar"
+            android:text="@string/description1"
+
+            app:layout_constraintBottom_toTopOf="@id/description2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/logo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/description2"
+            style="@style/TitleBar"
+            android:text="@string/description2"
+
+            app:layout_constraintBottom_toTopOf="@id/description3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/logo"
+            app:layout_constraintTop_toBottomOf="@id/description1" />
+
+        <TextView
+            android:id="@+id/description3"
+            style="@style/TitleBar"
+            android:text="@string/description3"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/logo"
+            app:layout_constraintTop_toBottomOf="@id/description2" />
+    </android.support.constraint.ConstraintLayout>
+
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/toolbar"
+        android:layout_below="@id/title"
+        android:scaleType="centerCrop"
+        android:src="@drawable/prototype"
+        android:tint="@color/colorPrimaryDark_semiTransparent" />
+
+    <TextView
+        android:id="@+id/qualityPolicy"
+        style="@style/ContactInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:text="@string/qualityPolicy"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/tempText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/toolbar"
+        android:layout_below="@+id/qualityPolicy"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="6dp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/ContactInfo"
+            android:text="Phone: (812) 346-5188" />
+
+        <TextView
+            style="@style/ContactInfo"
+            android:text="Address: 3330 N. State Road 7, North Vernon, IN 47265" />
+
+        <TextView
+            style="@style/ContactInfo"
+            android:text="Linked In: https://www.linkedin.com/company/decaturmold/about/" />
+
+        <TextView
+            style="@style/ContactInfo"
+            android:text="Facebook: https://www.facebook.com/Decaturmoldtoolengineering/" />
+
+        <TextView
+            style="@style/ContactInfo"
+            android:text="Google Maps: https://goo.gl/maps/8ZRKJ9ppo6L2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp">
+
+        <ImageButton
+            style="@style/MyToolbar"
+            app:srcCompat="@drawable/icon_phone_accented" />
+
+        <ImageButton
+            style="@style/MyToolbar"
+            app:srcCompat="@drawable/icon_facebook_accented" />
+
+        <ImageButton
+            style="@style/MyToolbar"
+            app:srcCompat="@drawable/icon_linkedin_accented" />
+
+        <ImageButton
+            style="@style/MyToolbar"
+            app:srcCompat="@drawable/icon_website_accented" />
+
+        <ImageButton
+            style="@style/MyToolbar"
+            app:srcCompat="@drawable/icon_maps_accented" />
+    </LinearLayout>
 </RelativeLayout>

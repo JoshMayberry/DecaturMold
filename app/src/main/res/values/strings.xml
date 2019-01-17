@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">DecaturMold</string>
+    <string name="app_name">Decatur Mold</string>
+    <string name="description1">Premier Injection Mold Manufacturer</string>
+    <string name="description2">Precision Industrial Tooling</string>
+    <string name="description3">Serving All Markets</string>
+    <string name="qualityPolicy">Decatur Mold sets appropriate quality objectives and continually improves its Quality Management System to provide quality molds and services to satisfy customer requirements.</string>
 </resources>
