@@ -3,6 +3,6 @@
     <!-- Color Tool: https://material.io/tools/color/#!/?view.left=0&view.right=0&primary.color=6002ee -->
     <color name="colorPrimary">#5d00ed</color>
     <color name="colorPrimaryDark">#0000b9</color>
-    <color name="colorPrimaryDark_semiTransparent">#990000b9</color>
+    <color name="colorPrimaryDark_semiTransparent">#990000b9</color> <!-- Use: https://stackoverflow.com/questions/46565592/make-imageview-have-dark-transparency/46565738#46565738 -->
     <color name="colorAccent">#9c47ff</color>
 </resources>

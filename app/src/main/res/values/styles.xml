@@ -7,6 +7,7 @@
     </style>
 
     <!-- Standardized Text -->
+    <!-- Use: https://developer.android.com/guide/topics/ui/look-and-feel/themes -->
     <style name="HasShadow">
         <item name="android:shadowColor">#000000</item>
         <item name="android:shadowDx">1</item>

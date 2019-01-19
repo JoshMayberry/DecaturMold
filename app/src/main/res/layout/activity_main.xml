@@ -7,6 +7,7 @@
     android:orientation="vertical"
     tools:context="com.example.android.decaturmold.MainActivity">
 
+    <!-- Use: https://codelabs.developers.google.com/codelabs/constraint-layout/index.html?index=..%2F..%2Findex#7 -->
     <android.support.constraint.ConstraintLayout
         android:id="@+id/title"
         android:layout_width="match_parent"
