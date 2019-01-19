@@ -23,6 +23,7 @@
 
     <style name="TitleBar" parent="BodyText">
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
     </style>
     <style name="ContactInfo" parent="BodyText">
         <item name="android:layout_weight">1</item>
